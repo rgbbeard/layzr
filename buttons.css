@@ -1,0 +1,51 @@
+/*Buttons*/
+:root {
+    --btn-default-bg-color: #006f00;
+    --btn-error-bg-color: #7f0000;
+    --btn-danger-bg-color: #f08000;
+    --btn-success-bg-color: #001f9f;
+
+    --btn-default-image-color: #00df00;
+    --btn-error-image-color: #ff0000;
+    --btn-danger-image-color: #ffd000;
+    --btn-success-image-color: #009fff;
+}
+
+.btn-custom {
+    display: inline-block;
+    background-color: var(--btn-default-bg-color);
+    appearance: button;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    color: #f9f9f9;
+    border-radius: 3px;
+    padding: 0.4em 0.6em;
+    font-size: 14px;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--btn-default-image-color));
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 2px #9f9f9f;
+}
+
+.btn-custom:hover {
+    filter: brightness(110%);
+}
+
+.btn-custom.btn-error {
+    background-color: var(--btn-error-bg-color);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--btn-error-image-color));
+}
+
+.btn-custom.btn-warning {
+    background-color: var(--btn-danger-bg-color);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--btn-danger-image-color));
+}
+
+.btn-custom.btn-success {
+    background-color: var(--btn-success-bg-color);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--btn-success-image-color));
+}
