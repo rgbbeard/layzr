@@ -12,6 +12,7 @@
 
     --btn-padding:0.4em 0.6em;
     --input-padding:0.3em 0.6em;
+    --default-border-radius:3px;
 }
 
 /* Beta */
@@ -44,7 +45,7 @@
     user-select: none;
     cursor: pointer;
     color: #f9f9f9;
-    border-radius: 3px;
+    border-radius: var(--default-border-radius);
     padding: var(--btn-padding);
     font-size: 14px;
     background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--default-image-color));
@@ -96,7 +97,7 @@
     padding: var(--input-padding);
     outline: none;
     border: solid 1px #aaa;
-    border-radius: 3px;
+    border-radius: var(--default-border-radius);
     min-width: 200px;
     /* box-shadow: 0px 0px 2px #999 inset; */
 }
@@ -156,7 +157,7 @@
     display: inline-block;
     background-color: #e6e6e6;
     border: solid 1px #ccc;
-    border-radius: 10px;
+    border-radius: var(--default-border-radius);
     cursor: pointer;
     vertical-align: middle;
     position: relative;
@@ -224,7 +225,7 @@ hr[ignore] {
     margin: 0px auto;
     background-color: #fff;
     padding: 15px 20px;
-    border-radius: 5px;
+    border-radius: var(--default-border-radius);
 }
 
 .confirm-window-content .btn-custom {
@@ -250,7 +251,7 @@ hr[ignore] {
     margin: 0 auto;
     background-color: #fff;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: var(--default-border-radius);
     overflow: hidden;
 }
 
@@ -314,7 +315,7 @@ hr[ignore] {
     display: none;
     background-color: #ccc;
     padding: 0.5em 0.8em;
-    border-radius:
+    border-radius: var(--default-border-radius);
 }
 
 [menu][menu-open] {
