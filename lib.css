@@ -9,6 +9,9 @@
     --error-image-color: #ff0000;
     --danger-image-color: #eec900;
     --success-image-color: #009fff;
+
+    --btn-padding:0.4em 0.6em;
+    --input-padding:0.3em 0.6em;
 }
 
 /* Beta */
@@ -42,11 +45,12 @@
     cursor: pointer;
     color: #f9f9f9;
     border-radius: 3px;
-    padding: 0.4em 0.6em;
+    padding: var(--btn-padding);
     font-size: 14px;
     background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--default-image-color));
     outline: none;
     border: none;
+    text-decoration: none !important;
     /* box-shadow: 0px 0px 2px #9f9f9f; */
 }
 
@@ -89,7 +93,7 @@
 }
 
 .input-group input {
-    padding: 0.3em 0.6em;
+    padding: var(--input-padding);
     outline: none;
     border: solid 1px #aaa;
     border-radius: 3px;
@@ -98,7 +102,7 @@
 }
 
 .input-group input[required]:placeholder-shown {
-    border-color: #d00;
+    box-shadow: 0px 0px 2px #d00 inset;
 }
 
 .input-group input::placeholder {
@@ -281,4 +285,38 @@ hr[ignore] {
 .reduced-interface-btn {
     position: sticky;
     bottom: 5px;
+}
+
+/*Menus*/
+[menu-trigger] {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 10px;
+    background-image: url("../icons/plus-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    position: relative;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+
+[menu-trigger]:after {
+    content: "Menu";
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    position: absolute;
+    right: -60px;
+}
+
+[menu] {
+    display: none;
+    background-color: #ccc;
+    padding: 0.5em 0.8em;
+    border-radius:
+}
+
+[menu][menu-open] {
+    display: inline-block;
 }
