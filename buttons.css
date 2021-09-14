@@ -46,6 +46,8 @@
         color:#fff;
 }
 
+
+/*Must use with renderer.js*/
 .btn-ripple {
         display:inline-block;
         border-radius:3px;
