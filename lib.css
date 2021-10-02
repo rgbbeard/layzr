@@ -1,539 +1,454 @@
 /*Buttons*/
 :root {
-    --default-bg-color: #006f00;
-    --error-bg-color: #7f0000;
-    --danger-bg-color: #e47000;
-    --success-bg-color: #001f9f;
-
-    --default-image-color: #00f900;
-    --error-image-color: #ff0000;
-    --danger-image-color: #eec900;
-    --success-image-color: #009fff;
-
     --btn-padding:0.4em 0.6em;
     --input-padding:0.3em 0.6em;
     --default-border-radius:3px;
 }
-
-/* Beta */
-.btn-custom:disabled {
-    background-color: #000 !important;
-}
-
-.btn-float {
-    position: sticky;
-    width: 50px;
-    height: 50px;
-    float: right;
-    bottom: 3%;
-    z-index: 99999999;
-    border-radius: 50px !important;
-    text-align: center;
-    padding: 0px;
-    margin: 0px 5px;
-    font-size: 20px !important;
-}
-
-.btn-custom {
-    display: inline-block;
-    background-color: var(--default-bg-color);
-    appearance: button;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    color: #f9f9f9;
-    border-radius: var(--default-border-radius);
-    padding: var(--btn-padding);
-    font-size: 14px;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--default-image-color));
-    outline: none;
-    border: none;
-    text-decoration: none !important;
-    /* box-shadow: 0px 0px 2px #9f9f9f; */
-}
-
-.btn-custom:hover {
-    filter: brightness(110%);
-}
-
-.btn-custom.btn-error {
-    background-color: var(--error-bg-color);
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--error-image-color));
-}
-
-.btn-custom.btn-warning {
-    background-color: var(--danger-bg-color);
-    /* color: #1f1f1f; */
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--danger-image-color));
-}
-
-.btn-custom.btn-success {
-    background-color: var(--success-bg-color);
-    color: #f9f9f9;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), var(--success-image-color));
-}
-
-.btn-custom.btn-white {
-    background-color: #ddd;
-    color: #1f1f1f;
-    background-image: linear-gradient(0deg, rgba(200, 200, 200, 0.3), #fff);
-    border: solid 1px #ccc;
-}
-
 /* Forms */
 .input-group {
-    margin: 20px 0px;
-    position: relative;
+        margin: 20px 0px;
+        position: relative;
 }
 
 .input-group.inline {
-    display: inline-block;
+        display: inline-block;
 }
 
-.input-group input {
-    padding: var(--input-padding);
-    outline: none;
-    border: solid 1px #aaa;
-    border-radius: var(--default-border-radius);
-    min-width: 200px;
-    /* box-shadow: 0px 0px 2px #999 inset; */
+.input-group input,
+.input-group textarea {
+        padding: 0.5em 0.8em;
+        outline: none;
+        border: solid 1px #aaa;
+        border-radius: 3px;
+        min-width: 200px;
 }
 
-.input-group input[required]:placeholder-shown {
-    box-shadow: 0px 0px 2px #d00 inset;
+.input-group input[required]:placeholder-shown,
+.input-group textarea[required]:placeholder-shown {
+        background-color: rgba(255, 0, 0, 0.2);
 }
 
-.input-group input::placeholder {
-    color: transparent;
+.input-group input[required]:placeholder-shown+label,
+.input-group textarea[required]:placeholder-shown+label {
+        color: #222;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+        color: transparent;
 }
 
 .input-group label,
-.input-group input:placeholder-shown+label {
-    position: absolute;
-    top: 15%;
-    left: 5px;
-    bottom: 0px;
-    color: #999;
-    transition: all 0.3s;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    cursor: text;
+.input-group input:placeholder-shown+label,
+.input-group textarea:placeholder-shown+label {
+        position: absolute;
+        top: 15%;
+        left: 5px;
+        bottom: 0px;
+        color: #999;
+        transition: all 0.3s;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        cursor: text;
 }
 
 .input-group input:focus+label,
-.input-group input:not(:placeholder-shown)+label {
-    top: -55%;
-    left: 0px;
-    font-size: 12px;
-    color: #1f1f1f;
+.input-group textarea:focus+label,
+.input-group input:not(:placeholder-shown)+label,
+.input-group textarea:not(:placeholder-shown)+label {
+        top: -55%;
+        left: 0px;
+        font-size: 12px;
+        color: #1f1f1f;
+}
+
+.input-group textarea:focus+label {
+        top: -5% !important;
 }
 
 .input-group.password-input span {
-    display: inline-block;
-    min-width: 30px;
-    height: 30px;
-    background-color: #fff;
-    vertical-align: middle;
-    padding: var(--default-padding);
-    cursor: pointer;
-    background-image: url("../res/icons/eye-hidden.svg");
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
+        display: inline-block;
+        min-width: 30px;
+        height: 30px;
+        background-color: #fff;
+        vertical-align: middle;
+        padding: var(--default-padding);
+        cursor: pointer;
+        background-image: url("../res/icons/eye-hidden.svg");
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
 }
 
 .input-group.password-input span[password-shown] {
-    background-image: url("../res/icons/eye-shown.svg");
+        background-image: url("../res/icons/eye-shown.svg");
 }
 
+/*Custom checkbox*/
 .checkbox-input label {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-color: #e6e6e6;
-    border: solid 1px #ccc;
-    border-radius: var(--default-border-radius);
-    cursor: pointer;
-    vertical-align: middle;
-    position: relative;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-color: #e6e6e6;
+        border: solid 1px #ccc;
+        border-radius: var(--default-border-radius);
+        cursor: pointer;
+        vertical-align: middle;
+        position: relative;
 }
 
 .checkbox-input input[type="checkbox"] {
-    display: none;
+        display: none;
 }
 
 .checkbox-input input[type="checkbox"]:checked+label {
-    background-color: var(--veloce-color-green);
-    border-color: transparent;
+        background-color: #0f0;
+        border-color: transparent;
 }
 
 .checkbox-input input[type="checkbox"]:checked+label::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    animation-name: ripple-animation;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 100px;
+        position: absolute;
+        content: "";
+        display: inline-block;
+        animation-name: ripple-animation;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 100px;
 }
 
 @keyframes ripple-animation {
-    from {
-        left: 100%;
-        right: 100%;
-        bottom: 100%;
-        top: 100%;
-    }
+        from {
+                left: 100%;
+                right: 100%;
+                bottom: 100%;
+                top: 100%;
+        }
 
-    to {
-        left: -100%;
-        right: -100%;
-        bottom: -100%;
-        top: -100%;
-        opacity: 0;
-    }
-}
-
-/* Ignored elements */
-hr[ignore] {
-    margin: 0px !important;
-    padding: 0px !important;
-    height: 1px;
-    visibility: hidden;
-}
-
-/* Confirm window */
-.confirm-window-background {
-    position: fixed;
-    z-index: 999999999;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: inline-flex;
-}
-
-.confirm-window-content {
-    align-self: center;
-    margin: 0px auto;
-    background-color: #fff;
-    padding: 15px 20px;
-    border-radius: var(--default-border-radius);
-}
-
-.confirm-window-content .btn-custom {
-    margin-right: 15px;
-}
-
-/* Interface window */
-.interface-background {
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99999999;
-    display: flex;
-}
-
-.interface-background .interface-window {
-    width: 95%;
-    height: 95vh;
-    align-self: center;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 5px 10px;
-    border-radius: var(--default-border-radius);
-    overflow: hidden;
-}
-
-.interface-background .interface-window .interface-head {
-    height: 50px;
-    background-color: #0ff;
-    margin: -5px -10px 5px;
-    padding: 0px 5px;
-}
-
-.interface-background .interface-window .interface-head .interface-head-title {
-    line-height: 50px;
-}
-
-.interface-background .interface-window .interface-head .interface-head-actions-container {
-    float: right;
-}
-
-.interface-background .interface-window .interface-head .btn-custom {
-    margin: 15px 5px 0px;
-    width: 25px;
-    text-align: center;
-    font-size: 70%;
-}
-
-.interface-background .interface-window .interface-head::after {
-    display: table;
-    content: "";
-    width: 100%;
-}
-
-.reduced-interface-btn {
-    position: sticky;
-    bottom: 5px;
-}
-
-/*Menus*/
-[menu-trigger] {
-    width: 15px;
-    height: 15px;
-    margin-bottom: 10px;
-    background-image: url("../icons/plus-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: contain;
-    position: relative;
-    cursor: pointer;
-    transition:all 0.3s;
-}
-
-[menu-trigger]:after {
-    content: "Menu";
-    display: inline-block;
-    width: 50px;
-    height: auto;
-    position: absolute;
-    right: -60px;
-}
-
-[menu] {
-    display: none;
-    background-color: #ccc;
-    padding: 0.5em 0.8em;
-    border-radius: var(--default-border-radius);
-}
-
-[menu][menu-open] {
-    display: inline-block;
+        to {
+                left: -100%;
+                right: -100%;
+                bottom: -100%;
+                top: -100%;
+                opacity: 0;
+        }
 }
 
 /*Spinners*/
 spinner-ring {
-    border-style: solid;
-    animation-name: SpinRing;
-    border-width: 6px;
-    border-color: #fff;
-    margin: 0px auto;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
+        border-style: solid;
+        animation-name: SpinRing;
+        border-width: 6px;
+        border-color: #fff;
+        margin: 0px auto;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
 }
 
 spinner {
-    border-style: dotted;
-    animation-name: Spin;
-    /*Widths*/
-    border-top-width: 6px;
-    border-right-width: 4px;
-    border-bottom-width: 2px;
-    border-left-width: 1px;
-    /*Colors*/
-    border-top-color: #fff;
-    border-right-color: #ffffffaa;
-    border-bottom-color: #ffffff88;
-    border-left-color: #ffffff44;
-    animation-duration: 0.8s;
+        border-style: dotted;
+        animation-name: Spin;
+        /*Widths*/
+        border-top-width: 6px;
+        border-right-width: 4px;
+        border-bottom-width: 2px;
+        border-left-width: 1px;
+        /*Colors*/
+        border-top-color: #fff;
+        border-right-color: #ffffffaa;
+        border-bottom-color: #ffffff88;
+        border-left-color: #ffffff44;
+        animation-duration: 0.8s;
 }
 
 spinner,
 spinner-ring {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    /*Animation*/
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    transition: all 0.5s;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        /*Animation*/
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        transition: all 0.5s;
 }
 
 spinner.red {
-    border-top-color: #f00;
-    border-right-color: #ff0000aa;
-    border-bottom-color: #ff000088;
-    border-left-color: #ff000044;
+        border-top-color: #f00;
+        border-right-color: #ff0000aa;
+        border-bottom-color: #ff000088;
+        border-left-color: #ff000044;
 }
 
 spinner-ring.gold {
-    border-color: #ffaa00;
+        border-color: #ffaa00;
 }
 
 spinner-ring.coin {
-    background-color: #ffaa00;
-    box-shadow: 0px 0px 2px #000 inset;
+        background-color: #ffaa00;
+        box-shadow: 0px 0px 2px #000 inset;
 }
 
 spinner-ring.small,
 spinner-ring.medium {
-    box-shadow: none;
+        box-shadow: none;
 }
 
 spinner-ring.medium {
-    width: 25px;
-    height: 25px;
-    animation-name: MediumSpinRing;
+        width: 25px;
+        height: 25px;
+        animation-name: MediumSpinRing;
 }
 
 spinner-ring.small {
-    width: 20px;
-    height: 20px;
-    animation-name: SmallSpinRing;
-    background-color: transparent;
+        width: 20px;
+        height: 20px;
+        animation-name: SmallSpinRing;
+        background-color: transparent;
 }
 
 spinner-ring.inverse {
-    filter: invert(100%);
+        filter: invert(100%);
 }
 
 spinner-container {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    z-index: 999999999999999;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    align-items: center;
-    justify-content: center;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 999999999999999;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        align-items: center;
+        justify-content: center;
 }
 
 spinner-container * {
-    text-align: center;
+        text-align: center;
 }
 
 /*Spinners animations*/
 @keyframes Spin {
-    from {
-        transform: rotate(0deg);
-    }
+        from {
+                transform: rotate(0deg);
+        }
 
-    25% {
-        transform: rotate(90deg);
-    }
+        25% {
+                transform: rotate(90deg);
+        }
 
-    50% {
-        transform: rotate(180deg);
-    }
+        50% {
+                transform: rotate(180deg);
+        }
 
-    75% {
-        transform: rotate(260deg);
-    }
+        75% {
+                transform: rotate(260deg);
+        }
 
-    to {
-        transform: rotate(360deg);
-    }
+        to {
+                transform: rotate(360deg);
+        }
 }
 
 @keyframes SpinRing {
-    from {
-        transform: rotate(0deg);
-        width: 60px;
-    }
+        from {
+                transform: rotate(0deg);
+                width: 60px;
+        }
 
-    10% {
-        width: 30px;
-    }
+        10% {
+                width: 30px;
+        }
 
-    25% {
-        width: 15px;
-    }
+        25% {
+                width: 15px;
+        }
 
-    50% {
-        width: 30px;
-    }
+        50% {
+                width: 30px;
+        }
 
-    75% {
-        width: 15px;
-    }
+        75% {
+                width: 15px;
+        }
 
-    90% {
-        width: 30px;
-    }
+        90% {
+                width: 30px;
+        }
 
-    to {
-        transform: rotate(360deg);
-        width: 60px;
-    }
+        to {
+                transform: rotate(360deg);
+                width: 60px;
+        }
 }
 
 @keyframes MediumSpinRing {
-    from {
-        transform: rotate(0deg);
-        width: 25px;
-    }
+        from {
+                transform: rotate(0deg);
+                width: 25px;
+        }
 
-    10% {
-        width: 20px;
-    }
+        10% {
+                width: 20px;
+        }
 
-    25% {
-        width: 18px;
-    }
+        25% {
+                width: 18px;
+        }
 
-    50% {
-        width: 15px;
-    }
+        50% {
+                width: 15px;
+        }
 
-    75% {
-        width: 18px;
-    }
+        75% {
+                width: 18px;
+        }
 
-    90% {
-        width: 20px;
-    }
+        90% {
+                width: 20px;
+        }
 
-    to {
-        transform: rotate(360deg);
-        width: 25px;
-    }
+        to {
+                transform: rotate(360deg);
+                width: 25px;
+        }
 }
 
 @keyframes SmallSpinRing {
-    from {
-        transform: rotate(0deg);
-        width: 20px;
-    }
+        from {
+                transform: rotate(0deg);
+                width: 20px;
+        }
 
-    10% {
-        width: 18px;
-    }
+        10% {
+                width: 18px;
+        }
 
-    25% {
-        width: 15px;
-    }
+        25% {
+                width: 15px;
+        }
 
-    50% {
-        width: 10px;
-    }
+        50% {
+                width: 10px;
+        }
 
-    75% {
-        width: 15px;
-    }
+        75% {
+                width: 15px;
+        }
 
-    90% {
-        width: 18px;
-    }
+        90% {
+                width: 18px;
+        }
 
-    to {
-        transform: rotate(360deg);
-        width: 20px;
-    }
+        to {
+                transform: rotate(360deg);
+                width: 20px;
+        }
+}
+
+/*Toast*/
+.toast {
+        width: 20%;
+        height: 10%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        border-radius: 6px;
+        padding: 10px;
+        position: fixed;
+        z-index: 999999999;
+}
+
+.toast.left {
+        left: 15px;
+}
+
+.toast.top {
+        top: 15px;
+}
+
+.toast.bot {
+        bottom: 15px;
+}
+
+.toast.right {
+        right: 15px;
+}
+
+.toast.bot.center,
+.toast.top.center {
+        left: 40%;
+        right: 40%;
+}
+
+.toast.left.center,
+.toast.right.center {
+        top: 45%;
+        bottom: 45%;
+}
+
+.toast.success {
+        background-color: rgba(0, 255, 100, 0.7);
+        color: #000;
+}
+
+.toast.warning {
+        background-color: rgba(255, 150, 0, 0.7);
+        color: #000;
+}
+
+.toast.error {
+        background-color: rgba(255, 10, 0, 0.8);
+        color: #fff;
+}
+
+.toast>div {
+        margin: 0 auto;
+}
+
+/*Interface*/
+.interface-background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 9999999999;
+}
+
+.interface-background .interface {
+        width: 80%;
+        height: 80%;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+}
+
+.interface-background .interface .interface-title-bar {
+        background-color: #0df;
+        color: #000;
+        padding: 5px 10px;
+}
+
+.interface-background .interface .interface-title-bar * {
+        display: inline-block;
+}
+
+.interface-background .interface .interface-title-bar .interface-close-btn {
+        margin: 0px 5px;
+}
+
+.interface-background .interface .interface-body {
+        padding: 5px 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
 }
