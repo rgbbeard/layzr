@@ -1,0 +1,31 @@
+.difficulty-level-selector {
+	width: auto;
+	height: 30px;
+}
+
+.difficulty-level-selector .dot,
+.difficulty-level-selector .zero {
+	width: 30px;
+	margin: 0px 5px;
+	height: 30px;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.difficulty-level-selector .dot {
+	background-image:  url("../img/star.svg");
+}
+
+.difficulty-level-selector .zero {
+	background-image:  url("../img/cross.svg");
+		color: #fff;
+}
+
+.difficulty-level-selector .dot.selected {
+	background-image:  url("../img/yellow_star.svg");
+}
