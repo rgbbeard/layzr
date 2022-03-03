@@ -81,8 +81,13 @@
         left: 0;
         font-size: 12px;
         line-height: 15px;
-        background-color: #ff0000cc;
+        background-color: #bbb;
         color: #fff;
+}
+
+.input-group input[required]:focus:placeholder-shown + label,
+.input-group textarea[required]:focus:placeholder-shown + label {
+        background-color: #ff0000 !important;
 }
 
 .input-group input[required]:focus:placeholder-shown + label,
