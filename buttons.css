@@ -5,7 +5,7 @@
 }
 
 .btn-glass {
-        font-size: 16px !important;
+        font-size: 14px !important;
         text-transform: uppercase;
         appearance: none;
         min-width: 50px;
@@ -14,7 +14,8 @@
         padding: 5px 8px;
         background-color: #efefef;
         border-radius: 3px;
-        background-image: linear-gradient(0deg, #eee 10px, rgba(255, 255, 255, 0.5), #dfdfdf);
+        background-image: linear-gradient(0deg, #ccc 10px, #fffc, #dfdfdf);
+        box-shadow: 0px 0px 10px #fffa inset;
         border-color: #bbb;
         color: #000;
         cursor: pointer;
@@ -25,8 +26,16 @@
 }
 
 .btn-glass:hover {
-        filter: brightness(120%);
+        filter: brightness(115%);
         transition: all 0.2s;
+        background-image: linear-gradient(0deg, #ccc 15px, #fffc, #dfdfdf);
+}
+
+.btn-glass.success,
+.btn-glass.warning,
+.btn-glass.info,
+.btn-glass.error {
+        color: #fff;
 }
 
 .btn-glass.success:hover {
@@ -36,25 +45,38 @@
         color: #000 !important;
 }
 
+.btn-glass.error {
+        background-color: #e00;
+        background-image: linear-gradient(0deg, #d00 10px, #fffa, #b00);
+        border-color: #c00;
+}
+
 .btn-glass.error:hover {
         background-color: #e00;
-        background-image: linear-gradient(0deg, #f00 10px, rgba(255, 255, 255, 0.4), #d00);
-        border-color: #c00;
-        color: #fff !important;
+        background-image: linear-gradient(0deg, #f00 15px, #fffa, #c00);
+        border-color: #e00;
+}
+
+.btn-glass.warning {
+        background-color: #ec0;
+        border-color: #ea0;
+        background-image: linear-gradient(0deg, #fa0 10px, #fffa, #dc0);
 }
 
 .btn-glass.warning:hover {
-        background-color: #fc0;
-        background-image: linear-gradient(0deg, #fb0 10px, rgba(255, 255, 255, 0.4), #de0);
-        border-color: #ce0;
-        color: #000 !important;
+        border-color: #ca0;
+        background-image: linear-gradient(0deg, #fa0 15px, #fffa, #dc0);
+}
+
+.btn-glass.info {
+        background-color: #0cf;
+        background-image: linear-gradient(0deg, #08d 10px, #fffa, #08d);
+        border-color: #08e;
 }
 
 .btn-glass.info:hover {
-        background-color: #03e;
-        background-image: linear-gradient(0deg, #00d 10px, rgba(255, 255, 255, 0.3), #03e);
-        border-color: #03e;
-        color: #fff !important;
+        border-color: #09d;
+        background-image: linear-gradient(0deg, #08d 15px, #fffa, #08d);
 }
 
 
@@ -133,6 +155,11 @@
 .btn-ripple.info {
         background-color: #0df;
         border-color: #6df;
+}
+
+.btn-ripple.secondary {
+        background-color: #def;
+        border-color: #ddf;
 }
 
 @keyframes ripple-animation {
