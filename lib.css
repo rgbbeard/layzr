@@ -418,13 +418,15 @@ spinner-container * {
 
 /*Toast*/
 .toast {
-        width: 20%;
-        height: 10%;
+        width: 40vw;
+        height: 50px;
+        max-height: 80px;
         background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
-        border-radius: 6px;
         padding: 10px;
         position: fixed;
+        box-shadow: 0px 2px 10px #333;
+        border-radius: 4px;
         z-index: 9999999999999;
 }
 
@@ -446,8 +448,8 @@ spinner-container * {
 
 .toast.bot.center,
 .toast.top.center {
-        left: 40%;
-        right: 40%;
+        left: 30vw;
+        right: 30vw;
 }
 
 .toast.left.center,
@@ -457,17 +459,17 @@ spinner-container * {
 }
 
 .toast.success {
-        background-color: rgba(0, 255, 100, 0.7);
+        background-color: #0f8;
         color: #000;
 }
 
 .toast.warning {
-        background-color: rgba(255, 150, 0, 0.7);
+        background-color: #fc0;
         color: #000;
 }
 
 .toast.error {
-        background-color: rgba(255, 10, 0, 0.8);
+        background-color: #f30;
         color: #fff;
 }
 
