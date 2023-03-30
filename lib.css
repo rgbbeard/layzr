@@ -52,7 +52,8 @@ a[link]:hover::after {
 }
 
 .input-group input,
-.input-group textarea {
+.input-group textarea,
+.input-group select {
         padding: 0.5em 0.8em;
         outline: none;
         border: solid 1px #aaa;
@@ -67,6 +68,10 @@ a[link]:hover::after {
         line-height: 30px;
         border-radius: var(--default-border-radius);
         height: auto;
+}
+
+.input-group.select label {
+        position: initial;
 }
 
 .input-group input[required]:placeholder-shown,
@@ -418,15 +423,13 @@ spinner-container * {
 
 /*Toast*/
 .toast {
-        width: 40vw;
-        height: 50px;
-        max-height: 80px;
+        width: 20%;
+        height: 10%;
         background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
+        border-radius: 6px;
         padding: 10px;
         position: fixed;
-        box-shadow: 0px 2px 10px #333;
-        border-radius: 4px;
         z-index: 9999999999999;
 }
 
@@ -448,8 +451,8 @@ spinner-container * {
 
 .toast.bot.center,
 .toast.top.center {
-        left: 30vw;
-        right: 30vw;
+        left: 40%;
+        right: 40%;
 }
 
 .toast.left.center,
@@ -459,17 +462,17 @@ spinner-container * {
 }
 
 .toast.success {
-        background-color: #0f8;
+        background-color: rgba(0, 255, 100, 0.7);
         color: #000;
 }
 
 .toast.warning {
-        background-color: #fc0;
+        background-color: rgba(255, 150, 0, 0.7);
         color: #000;
 }
 
 .toast.error {
-        background-color: #f30;
+        background-color: rgba(255, 10, 0, 0.8);
         color: #fff;
 }
 
@@ -496,7 +499,7 @@ spinner-container * {
         height: 80%;
         background-color: #fff;
         border-radius: 10px;
-        overflow: hidden;
+        overflow-x: hidden;
 }
 
 .interface-background .interface .interface-title-bar {
@@ -515,8 +518,6 @@ spinner-container * {
 
 .interface-background .interface .interface-body {
         padding: 5px 10px;
-        overflow-y: scroll;
-        overflow-x: hidden;
 }
 
 /*Custom confirm prompt*/
@@ -542,4 +543,26 @@ spinner-container * {
 
 .confirm-window-background .confirm-window-content .btn-ripple {
         margin: 0 5px;
+}
+
+/*Custom context menus*/
+.contextmenu {
+        position: absolute;
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0px 0px 10px #ccc;
+        border-radius: 10px;
+}
+
+.contextmenu .contextmenu-item {
+        display: inline-block;
+        width: 100%;
+        margin: 2px 0;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+}
+
+.contextmenu .contextmenu-item:hover {
+        background-color:#ccc;
 }

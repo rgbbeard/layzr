@@ -2,12 +2,13 @@
 .btn-float,
 .btn-ripple {
         text-decoration: none !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 }
 
 .btn-glass,
 .btn-ripple {
         display: inline-block;
-        border-radius: 3px;
         padding: 5px 8px;
         cursor: pointer;
         vertical-align: middle;
@@ -26,7 +27,7 @@
         background-image: linear-gradient(0deg, #ccc 10px, #fffc, #dfdfdf);
         box-shadow: 0px 0px 10px #fffa inset;
         border-color: #bbb;
-        color: #111a;
+        color: #0009;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
@@ -34,10 +35,24 @@
 }
 
 .btn-glass:hover {
-        color: #333;
+        color: #111;
         filter: brightness(115%);
         transition: all 0.2s;
         background-image: linear-gradient(0deg, #ccc 15px, #fffc, #dfdfdf);
+}
+
+.btn-glass.rounded {
+        border-radius: 6px;
+}
+
+.btn-glass.round {
+        border-radius: 1em;
+}
+
+.btn-glass.ellipse {
+        border-radius: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
 }
 
 .btn-glass.success,
@@ -107,6 +122,7 @@
         color: #000 !important;
         background-color: #fff;
         border: solid 1px #efefef;
+        border-radius: 3px;
         font-size: 16px !important;
         overflow: hidden;
         user-select: none;
@@ -129,7 +145,7 @@
         min-width: 20px !important;
         width: 20px;
         height: 20px;
-        line-height: 16px;
+        line-height: 20px;
         text-align: center;
         border-radius: 20px;
         padding: 0;
