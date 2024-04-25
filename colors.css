@@ -42,4 +42,20 @@
 	--intense-dark-black: #000;
 	--intense-brown: #422;
 	--intense-dark-brown: #322;
+
+	/* buttons specific colors */
+	--candy-default-1: #aaa;
+    --candy-default-2: #eee;
+
+    --candy-success-1: #004f00;
+    --candy-success-2: #00cf00;
+
+    --candy-danger-1: #ff3000;
+    --candy-danger-2: #efc000;
+
+    --candy-error-1: #ee0000;
+    --candy-error-2: #770000;
+
+    --candy-primary-1: #001f9f;
+    --candy-primary-2: #009fff;
 }
