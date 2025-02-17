@@ -1,0 +1,68 @@
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.container-full {
+	max-width: 100%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+}
+
+.col {
+	display: inline-flex;
+}
+
+.col-10 {
+  width: 100%;
+}
+
+.col-9 {
+  width: 90%;
+}
+
+.col-8 {
+  width: 80%;
+}
+
+.col-7 {
+  width: 70%;
+}
+
+.col-6 {
+  width: 60%;
+}
+
+.col-5 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 40%;
+}
+
+.col-3 {
+  width: 30%;
+}
+
+.col-2 {
+  width: 20%;
+}
+
+.col-1 {
+  width: 10%;
+}
