@@ -1,11 +1,1 @@
-[class*=" col-"] {
-	display: inline-flex;
 
-	&.center {
-		text-align: center;
-	}
-
-	&.distribute-items {
-
-	}
-}
