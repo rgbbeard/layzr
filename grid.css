@@ -72,3 +72,15 @@
 .col-1 {
   width: 10%;
 }
+
+[class*=" col-"] {
+  display: inline-flex;
+
+  &.center {
+    text-align: center;
+  }
+
+  &.distribute-items {
+
+  }
+}
