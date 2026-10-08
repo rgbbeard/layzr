@@ -1,86 +1,88 @@
 .container {
-	max-width: 80%;
-	margin: 0 auto;
+    max-width: 60%;
+    margin: 0 auto;
 }
 
 .container-full {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .container,
 .container-full {
-  display: inherit;
-  width: 100%;
+    display: inherit;
+    width: 100%;
 }
 
 .row {
-  display: flex;
-  width: 100%;
-  position: relative;
-  flex-wrap: wrap;
-  gap: 0;
+    --column-gap: 0.5em;
+
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    gap: var(--column-gap);
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    &::after {
+        content: "";
+        display: table;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+    }
+
+    &.y-align-items {
+        align-items: stretch;
+    }
 }
 
-.row::after {
-  content: "";
-  display: table;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-}
 
-.col {
-	display: inline-flex;
-}
+[class*=" col-"], .col {
+    display: inherit;
 
-.col-10 {
-  width: 100%;
-}
-
-.col-9 {
-  width: 90%;
-}
-
-.col-8 {
-  width: 80%;
-}
-
-.col-7 {
-  width: 70%;
-}
-
-.col-6 {
-  width: 60%;
-}
-
-.col-5 {
-  width: 50%;
-}
-
-.col-4 {
-  width: 40%;
-}
-
-.col-3 {
-  width: 30%;
-}
-
-.col-2 {
-  width: 20%;
+    &.center {
+        text-align: center;
+    }
 }
 
 .col-1 {
-  width: 10%;
+    flex: 0 0 10%;
+    max-width: calc(10% - var(--column-gap));
 }
-
-[class*=" col-"] {
-  display: inline-flex;
-
-  &.center {
-    text-align: center;
-  }
-
-  &.distribute-items {
-
-  }
+.col-2 {
+    flex: 0 0 20%;
+    max-width: calc(20% - var(--column-gap));
+}
+.col-3 {
+    flex: 0 0 30%;
+    max-width: calc(30% - var(--column-gap));
+}
+.col-4 {
+    flex: 0 0 40%;
+    max-width: calc(40% - var(--column-gap));
+}
+.col-5 {
+    flex: 0 0 50%;
+    max-width: calc(50% - var(--column-gap));
+}
+.col-6 {
+    flex: 0 0 60%;
+    max-width: calc(60% - var(--column-gap));
+}
+.col-7 {
+    flex: 0 0 70%;
+    max-width: calc(70% - var(--column-gap));
+}
+.col-8 {
+    flex: 0 0 80%;
+    max-width: calc(80% - var(--column-gap));
+}
+.col-9 {
+    flex: 0 0 90%;
+    max-width: calc(90% - var(--column-gap));
+}
+.col-10 {
+    flex: 0 0 100%;
+    max-width: 100%;
 }
